@@ -128,7 +128,6 @@ function main(
     process.stdout.cursorTo(0);
     let stdoutText = '';
     if (stream.results[0] && stream.results[0].alternatives[0]) {
-      stdoutText =
         correctedTime + ': ' + stream.results[0].alternatives[0].transcript;
     }
 
