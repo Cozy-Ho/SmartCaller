@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="height: 270px">
     </div>
 </template>
 
@@ -8,3 +8,4 @@ export default {
     name: 'RealMirror',
 }
 </script>
+

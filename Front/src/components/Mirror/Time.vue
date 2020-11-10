@@ -1,7 +1,7 @@
 <template>
     <div>
-      <h1> {{ date }} </h1>
-      <h1> {{ time }} </h1>
+      <h3> {{ date }} </h3>
+      <h3> {{ time }} </h3>
     </div>
 </template>
 

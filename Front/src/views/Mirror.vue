@@ -1,7 +1,7 @@
 <template>
     <div class="contaienr">
         <div class = "left">
-            <div style="height: 35%; margin-top: 5px;">
+            <div style="height: 35%; margin-top: 5px; margin-right: 15px;">
                 <Calendar></Calendar>
             </div>
             <div style="height: 35%; margin-top: 5px; margin-right: 5px;">
@@ -49,14 +49,14 @@ export default {
 
 <style scoped>
     .container {
-        height: 720px;
-        width: 1024px;
+        height: 1024px;
+        width: 720px;
         overflow-y: hidden;
     }
 
     .left {
         height: 70%;
-        margin-left: 750px;
+        margin-left: 450px;
     }
 
     .bottom {
@@ -69,12 +69,8 @@ export default {
     }
 
     .center {
-        /* height: 70%; */
+        height: 70%;
         width: 100%;
-    }
-
-    .weather {
-        width: 50%;
     }
 
    
