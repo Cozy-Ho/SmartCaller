@@ -15,8 +15,10 @@
     "bootstrap": "^4.5.3",
     "bootstrap-vue": "^2.18.1",
     "vue": "^2.6.12",
+    "vue-html5-camera": "^0.4.0",
     "vue-router": "^3.0.1",
-    "vue-weather-widget": "^4.2.2"
+    "vue-weather-widget": "^4.2.2",
+    "vue-web-cam": "^1.9.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

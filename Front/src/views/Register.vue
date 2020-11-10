@@ -1,7 +1,8 @@
 <template>
     <div class = "Container">
         <div>
-            <RegisterForm></RegisterForm>
+            <RegisterForm>
+            </RegisterForm>
         </div>
     </div>
 </template>

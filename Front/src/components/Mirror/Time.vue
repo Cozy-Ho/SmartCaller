@@ -28,9 +28,9 @@ export default {
 
           const hour = today.getHours() + "시";
           const minute = today.getMinutes() + "분";
-        //   const second = today.getSeconds();
+          const second = today.getSeconds() + "초";
 
-          const time = hour + minute;
+          const time = hour + minute + second;
           const date = year + month + day;
 
           this.time = time;
