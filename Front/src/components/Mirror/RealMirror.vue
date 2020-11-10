@@ -1,5 +1,5 @@
 <template>
-    <div class="top">
+    <div>
     </div>
 </template>
 
@@ -8,9 +8,3 @@ export default {
     name: 'RealMirror',
 }
 </script>
-
-<style scoped>
-    .top {
-        /* text-align: center; */
-    }
-</style>

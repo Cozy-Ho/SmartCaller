@@ -1,7 +1,10 @@
 <template>
     <div class="contaienr">
         <div class = "left">
-            <div class = "todo">
+            <div style="height: 35%; margin-top: 5px;">
+                <Calendar></Calendar>
+            </div>
+            <div style="height: 35%; margin-top: 5px; margin-right: 5px;">
                 <Todo></Todo>
             </div>
         </div>
@@ -13,10 +16,10 @@
         </div>
 
         <div class = "bottom">
-            <div class = "weather">
+            <div style="flex: 1; float: left; width: 70%;">
                 <Weather></Weather>
             </div>
-            <div class = "Time">
+            <div style="flex: 1; float: right; width: 30%; margin-top:30px; margin-left: 10px;">
                 <Time></Time>
             </div>
         </div>
@@ -29,6 +32,7 @@
 import Time from "../components/Mirror/Time.vue"
 import Todo from "../components/Mirror/Todo.vue"
 import Weather from "../components/Mirror/Weather.vue"
+import Calendar from "../components/Mirror/Calendar.vue"
 import RealMirror from "../components/Mirror/RealMirror.vue"
 
 export default {
@@ -37,7 +41,8 @@ export default {
         Time,
         Todo,
         Weather,
-        RealMirror
+        RealMirror,
+        Calendar
     }
 }
 </script>
@@ -46,33 +51,31 @@ export default {
     .container {
         height: 720px;
         width: 1024px;
+        overflow-y: hidden;
     }
 
     .left {
-
+        height: 70%;
+        margin-left: 750px;
     }
 
-    .center {
-
-    }
-
-    .right{
-
-    }
-
-    .time {
-
-    }
-
-    .todo {
-
-    }
-
-    .weather {
+    .bottom {
+        display: flex;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        height: 30%;
         width: 100%;
     }
 
-    .realMirror {
-
+    .center {
+        /* height: 70%; */
+        width: 100%;
     }
+
+    .weather {
+        width: 50%;
+    }
+
+   
 </style>
