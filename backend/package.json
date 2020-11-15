@@ -9,6 +9,7 @@
     "googleapis": "^61.0.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
+    "path": "^0.12.7",
     "sequelize": "^6.3.5",
     "socket.io": "^3.0.1"
   }
