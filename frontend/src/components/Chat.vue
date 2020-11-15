@@ -20,27 +20,33 @@
         </md-app> 
     </div> 
 </template>
- <script>
-import io from 'socket.io-client';
+
+<script>
+//import io from 'socket.io-client';
+
+
+//var socket = io('http://10.0.2.15:3001'); 
 export default {
     name: 'Chat',
     created() {
-        this.socket.on('chat', (data)=> { 
+        this.$socket.on('chat', (data)=> { 
+                console.log(data.message)
                 this.textarea += data.message + "\n" 
             }) 
     }, 
     data() {
         return {
-            socket : io('localhost:3001'),
+            //socket : io('localhost:3001'),
             textarea: "",
             message: '', 
         } 
     }, 
     methods: { 
         sendMessage () { 
-            this.socket.emit('chat',{ 
+            this.$socket.emit('chat',{ 
                 message: this.message 
             });
+            console.log(this.message)
             this.textarea += this.message + "\n" 
             this.message = '' 
         } 

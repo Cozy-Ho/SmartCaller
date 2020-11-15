@@ -10,8 +10,8 @@ export default {
   name: 'app',
   components: { 
     Chat 
-    } 
-  }
+  } 
+}
 </script> 
 <style> 
   #app { 

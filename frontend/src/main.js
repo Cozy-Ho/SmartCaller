@@ -5,16 +5,21 @@ import 'vue-material/dist/vue-material.css'
 import 'vue-material/dist/theme/black-green-light.css'
 import Directives from '../plugin/directives'
 
-//import io from 'socket.io-client';
-//const socket = io('http://10.0.2.15:3001'); 
+import io from 'socket.io-client';
 
-//Vue.prototype.$socket = socket;
+
+const socket = io('http://localhost:3001'); 
+
+//Vue.config.productionTip = false
+Vue.prototype.$socket = socket;
 
 Vue.use(VueMaterial) 
 Vue.use(Directives)
 
+
 Vue.config.productionTip = false
+
 console.log('start');
 new Vue({ 
-  render: h => h(App), 
+  render: h => h(App),
 }).$mount('#app')
