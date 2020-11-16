@@ -7,6 +7,9 @@ import subprocess
 import os
 
 """
+python2.7
+tensorflow v1.1
+
 GOOGLE_CLOUD_UTIL_INSTALL 해야함 링크 참고 =>  https://cloud.google.com/storage/docs/gsutil_install#mac
 
 구글 계정으로 로그인

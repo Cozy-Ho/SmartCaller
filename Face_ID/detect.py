@@ -1,6 +1,9 @@
 
 """
+python3.9
+
 pip3 install -r detect_requirements.txt
+
 """
 
 import argparse
