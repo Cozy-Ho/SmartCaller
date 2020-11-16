@@ -7,6 +7,7 @@
         <button class="delete" aria-label="close" @click="closeModal"></button>
       </header>
       <section class="modal-card-body">
+        <vue-timepicker v-model="yourTimeValue"></vue-timepicker>
         <textarea
             class="textarea"
             :placeholder="placeholder"
@@ -25,14 +26,23 @@
 <script>
 import axios from 'axios';
 import EventBus from "./EventBus";
+import VueTimepicker from 'vue-time-picker'
+
   export default {
     name: "Modal",
     props: ["modalOpen"],
+    components: {
+      VueTimepicker
+    },
     data() {
       return {
         placeholder: "오늘 할 일을 적어주세요",
-        buttonMessage: ["저장", "취소"],
-      };
+        buttonMessage: ["저장", "취소"], 
+        yourTimeValue: {
+          HH: '',
+          mm: ''
+        }
+      }
     },
 
     created () {
@@ -65,15 +75,18 @@ import EventBus from "./EventBus";
         };
         EventBus.$emit("addList", data);
       },
-      sendContents () {
-      this.$socket.emit('calendar', {
-        contents: this.contents,
-        socketId: this.$socket.id
-      })
-      this.contents += '[' + this.$socket.id + ']' + this.contents + '\n'
-      this.contents = ''
-      this.socketId = this.$socket.id
-    }
+        sendContents () {
+        this.$socket.emit('calendar', {
+          contents: this.contents,
+          socketId: this.$socket.id
+        })
+        this.contents += '[' + this.$socket.id + ']' + this.contents + '\n'
+        this.contents = ''
+        this.socketId = this.$socket.id
+        },
+        inputHandler (eventData) {
+          console.log(eventData)
+        }
     },
   };
 </script>

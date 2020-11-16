@@ -10,7 +10,7 @@ export default {
 </script>
 
 <style scoped>
-    .top {
-        /* text-align: center; */
-    }
+    /* .top {
+        text-align: center;
+    } */
 </style>

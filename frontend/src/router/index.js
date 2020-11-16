@@ -1,26 +1,26 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Login from '../views/Login'
-import Register from '../views/Register'
+// import Login from '../views/Login'
+// import Register from '../views/Register'
 import Mirror from '../views/Mirror'
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'Login',
-    component: Login
-  },
+  // {
+  //   path: '/',
+  //   name: 'Login',
+  //   component: Login
+  // },
   
-  {
-    path: '/Register',
-    name: 'Register',
-    component: Register
-  },
+  // {
+  //   path: '/Register',
+  //   name: 'Register',
+  //   component: Register
+  // },
 
   {
-    path: '/Mirror',
+    path: '/',
     name: 'Mirror',
     component: Mirror
   }

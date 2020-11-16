@@ -4,7 +4,8 @@
     latitude="37.5642135"
     longitude="127.0016985"
     language="kr"
-    units="uk" />
+    units="uk"
+    />
 </template>
 
 <script>

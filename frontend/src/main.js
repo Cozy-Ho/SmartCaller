@@ -14,6 +14,8 @@ var socket = io('http://localhost:3000')
 Vue.config.productionTip = false
 Vue.prototype.$socket = socket
 
+// Vue.use(window.VueTimepicker)
+
 Vue.use(VueMaterial)
 // Vue.use(Directives)
 Vue.use(vuetify);

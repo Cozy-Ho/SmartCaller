@@ -2,11 +2,11 @@
 <div class="top">
     <div class="container">
       <h2 class="subtitle has-text-centered">
-        <b-button class="button is-small is-primary is-outlined mr-1"
-        @click="calendarData(-1)">&lt;</b-button>
+        <button class="button is-small is-primary is-outlined mr-1"
+        @click="calendarData(-1)">&lt;</button>
         <span style="color: white;"> {{ year }}년 {{ month }}월 </span>
-        <b-button class="button is-small is-primary is-outlined ml-1"
-        @click="calendarData(1)">&gt;</b-button>
+        <button class="button is-small is-primary is-outlined ml-1"
+        @click="calendarData(1)">&gt;</button>
       </h2>
       <table class="table has-text-centered is-fullwidth">
         <thead>
