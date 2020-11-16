@@ -1,2 +1,5 @@
-/STT/node_modules/
-/Server/node_modules/
+node_modules
+.DS_Store
+env_detect
+env_learn
+.keep
