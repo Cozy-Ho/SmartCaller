@@ -1,7 +1,7 @@
 {
   "smartcaller": {
     "username": "root",
-    "password": "root",
+    "password": "",
     "database": "smartcaller",
     "host": "127.0.0.1",
     "dialect": "mysql"
