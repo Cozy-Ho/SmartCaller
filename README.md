@@ -24,6 +24,6 @@
 
 ## 개발 파트
 - <del>**PM** : <code>허강주</code></del>
-- <del>**Face ID** : <code>서영빈</code>, <code>허강주</code></del>
-- <del>**Server** : <code>이상훈</code>, <code>송형근</code></del>
+- <del>**Face ID** : <code>서영빈 허강주</code></del>
+- <del>**Server** : <code>이상훈 송형근</code></del>
 - <del>**Front** : <code>이승민</code></del>
