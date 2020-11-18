@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false}));
 
 //sync()를 통해서 서버를 실행할 때 sequelize가 mysql을 연결
-//sequelize.sync();
+sequelize.sync();
 //라우팅 모듈 선언
 app.use('/', require('./routes/index'));
 //app.use('/', require('./src/STT'));
