@@ -1,2 +1,13 @@
 # SmartCaller
-Smart Mirror + calendar
+
+## 목차
+1. 프로젝트 개요
+2. 개발 환경
+3. 개발 과정
+4. 개발 계획
+5. 개발 파트
+
+## 개발 환경
+- MAC & Ubuntu
+- 
+
