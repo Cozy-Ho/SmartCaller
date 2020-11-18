@@ -23,7 +23,13 @@
   - 데이터베이스 구성
 
 ## 개발 파트
-- <del>**PM** : <code>허강주</code></del>
+- **PM** : <code>허강주</code>
 - <del>**Face ID** : <code>서영빈 허강주</code></del>
-- <del>**Server** : <code>이상훈 송형근</code></del>
-- <del>**Front** : <code>이승민</code></del>
+  <del>**Server** : <code>이상훈 송형근</code></del>
+  <del>**Front** : <code>이승민</code></del>
+
+- **Server** : <code>이상훈 허강주 송형근</code>
+  **Front** : <code>이승민 서영빈</code>
+
+##
+
