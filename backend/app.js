@@ -33,7 +33,7 @@ app.use(cors(corsOptions));
 
 
 app.get("/", function (req, res) {
-  res.sendFile("App Server");
+  res.send("App Server");
 });
 
 //connection event handler

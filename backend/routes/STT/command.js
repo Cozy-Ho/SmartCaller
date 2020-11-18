@@ -12,7 +12,7 @@ router.post('/', (req, res) =>{
         commands.comp_command_list(req,res)
     }
     else if(command == "일정보여줘"|| command == "일정"){
-        commands.comp_cal(req,res)
+        commands.comp_show(req,res)
     }
     else if(command == "일정등록해줘" || command == "일정등록헤줘" || command == "일정등록"){
         commands.comp_regist(req,res)
@@ -28,7 +28,7 @@ router.post('/', (req, res) =>{
     }
     else{
         res.json({
-            "result": "false",
+            "result": "fail",
             "command": command
         })
     }

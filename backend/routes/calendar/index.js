@@ -7,11 +7,12 @@ router.get('/', function(req, res, next) {
 });
 
 //user routing
-router.use('/info', calendar.calendar_info);
-router.use('/schedule_info', calendar.schedule_info)
-router.use('/schedule_regist',  calendar.schedule_regist);
-router.use('/schedule_edit',  calendar.schedule_edit);
-router.use('/schedule_delete',  calendar.schedule_delete);
-
+router.get('/info', calendar.calendar_info);
+router.post('/schedule_info', calendar.schedule_info)
+router.post('/schedule_regist',  calendar.schedule_regist);
+router.post('/schedule_edit',  calendar.schedule_edit);
+router.post('/schedule_delete',  calendar.schedule_delete);
+router.get('/schedule_today',  calendar.schedule_today);
+router.post('/schedule_id',  calendar.schedule_id);
 
 module.exports = router;

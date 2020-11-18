@@ -5,11 +5,6 @@
 
 module.exports =(sequelize, DataTypes) => {
   return sequelize.define('calendar', {
-    calendar_id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
-    },
     title: {
       type: DataTypes.STRING(45),
       allowNull: false,
@@ -18,8 +13,12 @@ module.exports =(sequelize, DataTypes) => {
       type: DataTypes.STRING(1000),
       allowNull: true,
     },
-    start_time: {
-      type: DataTypes.DATE,
+    date: {
+      type: DataTypes.STRING(45),
+      allowNull: false,
+    },
+    time: {
+      type: DataTypes.STRING(45),
       allowNull: false,
     }
   },
