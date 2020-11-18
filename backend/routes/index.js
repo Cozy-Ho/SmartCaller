@@ -7,10 +7,11 @@ router.get('/', (req, res, next) => {
 
 //user routing
 router.use('/user', require('./user/index'));
-router.use('/calendar', require('./calendar/index'));
 
 //calendar routing
 router.use('/calendar', require('./calendar/index'));
+
+router.use('/STT', require('./STT/index'));
 
 
 module.exports = router;

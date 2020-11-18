@@ -29,15 +29,11 @@ io.on('connection' , function(socket) {
 
     socket.on('chat', function(data){
         console.log('message from Client: '+data.message) 
-        var rtnMessage = {
-            message: data.message
-        }; 
-        // 클라이언트에게 메시지를 전송한다 
-        socket.broadcast.emit('chat', rtnMessage); 
     }); 
+    socket.emit('chat', rtnMessage); 
 }) 
 
-app.listen(3001, function() { 
+server.listen(3001, function() { 
     console.log('socket io server listening on port 3001') 
 })
 

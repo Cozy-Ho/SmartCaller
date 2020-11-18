@@ -1,64 +1,55 @@
-<template> 
-    <div class="page-container"> 
-        <md-app>
-             <md-app-toolbar class="md-primary"> 
-                <div class="md-toolbar-row"> 
-                    <span class="md-title">My Chat App</span> 
-                </div> 
-            </md-app-toolbar> 
-            <md-app-content> 
-                <md-field> 
-                    <label>Message</label> 
-                    <md-textarea v-model="textarea" disabled v-auto-scroll-bottom></md-textarea> 
-                </md-field> 
-                <md-field> 
-                    <label>Your Message</label>
-                    <md-input v-model="message"></md-input> 
-                    <md-button class="md-primary md-raised" @click="sendMessage()">Submit</md-button>
-                </md-field> 
-            </md-app-content> 
-        </md-app> 
-    </div> 
-</template>
-
-<script>
-//import io from 'socket.io-client';
-
-
-//var socket = io('http://10.0.2.15:3001'); 
+<template>
+  <div class="page-container">
+    <app>
+      <app-toolbar class="primary">
+        <div class="toolbar-row">
+          <span class="title">My Chat App</span>
+        </div>
+      </app-toolbar>
+      <app-content>
+        <field>
+          <label>Message</label>
+          <textarea
+            v-model="textarea"
+            disabled
+            v-auto-scroll-bottom
+          ></textarea>
+        </field>
+        <field>
+          <label>Your Message</label> <input v-model="message" type="text">
+          <button class="primary raised" @click="sendMessage()"
+            >Submit</button
+          >
+        </field>
+      </app-content>
+    </app>
+  </div>
+</template> <script>
 export default {
-    name: 'Chat',
-    created() {
-        this.$socket.on('chat', (data)=> { 
-                console.log(data.message)
-                this.textarea += data.message + "\n" 
-            }) 
-    }, 
-    data() {
-        return {
-            //socket : io('localhost:3001'),
-            textarea: "",
-            message: '', 
-        } 
-    }, 
-    methods: { 
-        sendMessage () { 
-            this.$socket.emit('chat',{ 
-                message: this.message 
-            });
-            console.log(this.message)
-            this.textarea += this.message + "\n" 
-            this.message = '' 
-        } 
-    } 
-} 
+  name: "Chat",
+  created() {
+    this.$socket.on("chat", (data) => {
+      this.textarea += data.message + "\n";
+    });
+  },
+  data() {
+    return { textarea: "", message: "" };
+  },
+  methods: {
+    sendMessage() {
+      this.$socket.emit("chat", { message: this.message });
+      this.textarea += this.message + "\n";
+      this.message = "";
+    },
+  },
+};
 </script> 
-<style> 
-    .md-app { 
-        height: 800px; 
-        border: 1px solid rgba(#000, .12); 
-    } 
-    .md-textarea { 
-        height: 300px; 
-    }
+<style>
+.app {
+  height: 800px;
+  border: 1px solid rgba(#000, 0.12);
+}
+.textarea {
+  height: 300px;
+}
 </style>
