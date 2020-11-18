@@ -6,7 +6,9 @@ const express = require("express"),
   io = require("socket.io")(server),
   cors = require("cors"),
   PORT = process.env.PORT || 3000;
+const path = require('path');
 
+app.use(express.static('public'));
 //bodyParser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -31,6 +33,11 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
+
+
+app.use(require('connect-history-api-fallback')());
+
+app.use(express.static(path.join(__dirname,'public')));
 
 app.get("/", function (req, res) {
   res.send("App Server");
