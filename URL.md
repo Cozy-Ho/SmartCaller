@@ -9,3 +9,4 @@
 |Schedule edit        |calendar/schedule_edit  |post |{title, contents, date, time}                             |Success : {result:true}, fail : {result:false}                  |
 |Schedule delete      |calendar/schedule_delete|post |{title, date}                                             |Success : true, fail : false                                    |
 |Schedule list(today) |calendar/schedule_today |get  |{""}                                                      |Success : true, fail : false     |
+|Schedule edit(id)    |calendar/schedule_id    |post  |{title, date, time}                                      |Success : {result:"ok","schedule_info" : schedule_info}    |
