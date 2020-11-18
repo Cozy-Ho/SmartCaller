@@ -8,5 +8,5 @@
 |Schedule regist      |calendar/schedule_regist|post |{title, contents, date, time}                             |Success : {result:true}, fail : {result:false}                  |
 |Schedule edit        |calendar/schedule_edit  |post |{title, contents, date, time}                             |Success : {result:true}, fail : {result:false}                  |
 |Schedule delete      |calendar/schedule_delete|post |{title, date}                                             |Success : true, fail : false                                    |
-|Schedule list(today) |calendar/schedule_today |get  |{""}                                                      |Success : true, fail : false     |
+|Schedule list(today) |calendar/schedule_today |get  |{""}                                                      |Success : {result:"ok","schedule_today" : schedule_today}        
 |Schedule edit(id)    |calendar/schedule_id    |post  |{title, date}                                      |Success : {result:"ok","schedule_info" : schedule_info}    |
