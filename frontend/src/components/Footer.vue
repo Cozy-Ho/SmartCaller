@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-      <h2>{{message}}</h2>
+      <h1>{{message}}</h1>
   </div>
 </template>
 
@@ -21,6 +21,7 @@ export default {
     height:100px;
     position:absolute;
     bottom:0;
+    margin-bottom: 100px;
     background:black;
     text-align: center;
     color: white;

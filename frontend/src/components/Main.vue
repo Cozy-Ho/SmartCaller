@@ -27,7 +27,12 @@ export default {
   },
   created() {
     this.$socket.on("chat", (data) => {
-      this.$store.commit("set_user_text",data.command);
+      // var command = data.command;
+      // if(command.startsWith("스마트캘러") || command.startsWith("스마트켈러")){
+      //   this.selComp = data.command;
+      // }
+      // this.selComp = data.command;
+      this.$store.commit("set_user_text",data.message);
     });
   },
   
