@@ -62,6 +62,7 @@ function main(
   // const sampleRateHertz = 16000;
   // const languageCode = 'en-US';
   // const streamingLimit = 10000; // ms - set to low number for demo purposes
+  var stt = require("../backend/src/STT_sendMessage")
 
   const chalk = require('chalk');
   const {Writable} = require('stream');
@@ -128,12 +129,14 @@ function main(
     process.stdout.cursorTo(0);
     let stdoutText = '';
     if (stream.results[0] && stream.results[0].alternatives[0]) {
-        correctedTime + ': ' + stream.results[0].alternatives[0].transcript;
+      stdoutText =stream.results[0].alternatives[0].transcript;
+        //correctedTime + ': ' + stream.results[0].alternatives[0].transcript;
     }
 
     if (stream.results[0].isFinal) {
       process.stdout.write(chalk.green(`${stdoutText}\n`));
-      process.stdout.write(chalk.green(`${"test"}\n`));
+      // Text!!!!!!!!
+      stt.sendMessage(stdoutText)
       isFinalEndTime = resultEndTime;
       lastTranscriptWasFinal = true;
     } else {
