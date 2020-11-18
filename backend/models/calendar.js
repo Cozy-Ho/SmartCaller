@@ -10,10 +10,6 @@ module.exports =(sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
-    user_id: {
-      type: DataTypes.STRING(600),
-      allowNull: false,
-    },
     title: {
       type: DataTypes.STRING(45),
       allowNull: false,
@@ -25,14 +21,6 @@ module.exports =(sequelize, DataTypes) => {
     start_time: {
       type: DataTypes.DATE,
       allowNull: false,
-    },
-    end_time: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
-    alarm: {
-      type: DataTypes.DATE,
-      allowNull: true,
     }
   },
   {

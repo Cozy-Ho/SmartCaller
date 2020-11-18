@@ -3,11 +3,7 @@ exports.calendar_info = (req, res) => {
   console.log("<<calendar/info>>");
 
   try {
-    Calendar.find({
-      where: {
-        user_id: req.qeury.user_id,
-      },
-    })
+    Calendar.findAll()
       .then((calendar) => {
         res.json({ result: "ok", calendar: calendar });
       })
@@ -24,7 +20,6 @@ exports.schedule_info = (req, res) => {
   try {
     Calendar.find({
       where: {
-        user_id: req.qeury.user_id,
         id: req.qeury.calendar_id,
       },
     })
@@ -38,16 +33,14 @@ exports.schedule_info = (req, res) => {
     console.error(error);
   }
 };
+
 exports.schedule_regist = (req, res) => {
   console.log("<<schedule/regist>>");
 
   Calendar.create({
-    user_id: req.body.user_id,
     title: req.body.title,
     contents: req.body.contents,
     start_time: req.body.start_time,
-    end_time: req.body.end_time,
-    alarm: req.body.alarm,
   })
     .then(() => {
       res.send(true);
@@ -61,12 +54,9 @@ exports.schedule_edit = (req, res) => {
   
   Calendar.update(
     {
-      user_id: req.body.user_id,
       title: req.body.title,
       contents: req.body.contents,
       start_time: req.body.start_time,
-      end_time: req.body.end_time,
-      alarm: req.body.alarm,
     },
     { where: { id: req.body.calendar_id } }
   )
@@ -82,14 +72,13 @@ exports.schedule_delete = (req, res) => {
   Calendar.destroy({
     where: {
       title: req.body.title,
-      start_time : req.body.start_time,
-      end_time: req.body.end_time
+      start_time : req.body.start_time
     }
   })
-  .then(result => {
-     res.json({});
+  .then(() => {
+    res.send(true);
   })
-  .catch(err => {
-     console.error(err);
+  .catch(() => {
+    res.send(false);
   });
 };
