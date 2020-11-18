@@ -1,44 +1,42 @@
 <template>
-  <div class="container">
-    <div style="flex=1; width=360px">
-      <vue-weather
-      api-key="6ee2a88205ea4588a65538ecf333db6c"
-      units="uk"
-      hide-header="true"
-      bar-color="white"
-      text-color="white"
-      latitude="37.532600"
-      longitude="127.024612"
-    />
+  <div>
+    <Header></Header>
+    <div class="comp">
+      <component :is="selComp"></component>
     </div>
-    <div style="flex=1; width=360px">
-      <!-- <digital-clock :blink="true" :twelveHour="true"/> -->
-    </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import VueWeather from "vue-weather-widget";
-
+import Header from "./Header";
+import Comp_Cal from "./Comp_Cal";
+import Footer from "./Footer";
 
 export default {
   name: 'Main',
   components: {
-      VueWeather,
-    },
+    Header,
+    Footer,
+    Comp_Cal,
+  },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      selComp: 'Comp_Cal'
     }
-  }
+  },
+  created() {
+    this.$socket.on("chat", (data) => {
+      this.$store.commit("set_user_text",data.command);
+    });
+  },
+  
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.container{
-  display: flex;
-  width: 100%;
-  height: 100%;
+.comp{
+  top: 200px;
 }
 </style>
