@@ -24,11 +24,11 @@
 
 ## 개발 파트
 - **PM** : <code>허강주</code>
-- <del>**Face ID** : <code>서영빈 허강주</code></del>
-- <del>**Server** : <code>이상훈 송형근</code></del>
-- <del>**Front** : <code>이승민</code></del>
+- <del>**Face ID** : <code>서영빈 허강주</code></del><br>
+  <del>**Server** : <code>이상훈 송형근</code></del><br>
+  <del>**Front** : <code>이승민</code></del><br>
 
-- **Server** : <code>이상훈 허강주 송형근</code>
-- **Front** : <code>이승민 서영빈</code>
+- **Server** : <code>이상훈 허강주 송형근</code><br>
+  **Front** : <code>이승민 서영빈</code>
 
 
