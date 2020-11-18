@@ -9,7 +9,7 @@
 
 ## 프로젝트 개요 (2020년도 2학기)
 - **명칭**<br>
-  SmartCaller = Smart + Caller
+  SmartCaller = Smart + Calendar
 - **개요**<br>
   거울을 보며 동시에 일정 확인과 날씨 정보를 확인할 수 있다.
 - **소개**<br>
