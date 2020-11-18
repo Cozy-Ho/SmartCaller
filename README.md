@@ -29,7 +29,6 @@
   <del>**Front** : <code>이승민</code></del>
 
 - **Server** : <code>이상훈 허강주 송형근</code>
-  **Front** : <code>이승민 서영빈</code>
+- **Front** : <code>이승민 서영빈</code>
 
-##
 
