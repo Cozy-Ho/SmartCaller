@@ -42,7 +42,7 @@ app.use(cors(corsOptions));
 
 //connection event handler
 function Message(text) {
-  console.log(text)
+  //console.log(text)
   io.sockets.emit("chat", { message: text });
 }
 
