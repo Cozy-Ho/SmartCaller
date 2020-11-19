@@ -6,7 +6,7 @@
       <h2 v-if="count==1">삭제 할 일정 제목은 무엇인가요?</h2>
   </div>
     <div>
-        <li v-for="event in events" :key="event">{{event}}</li>
+        <li v-for="event in events" :key="event">{{event.command}}</li>
   </div>
 </div>
 </template>

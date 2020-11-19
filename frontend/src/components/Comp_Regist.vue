@@ -8,7 +8,7 @@
         <h2 v-if="count==3">일정 설명을 말씀해 주세요</h2>
     </div>
     <div>
-        <li v-for="event in events" :key="event">{{event}}</li>
+        <li v-for="event in events" :key="event">{{event.command}}</li>
     </div>
   </div>
 </template>

@@ -5,9 +5,13 @@
       <h2 v-if="count==0">몇 일 일정을 보여드릴까요?</h2>
   </div>
   
-  <div>
-      <li v-for="schedule in schedules" :key="schedule">{{schedule}}</li>
-  </div>
+  <ol v-for="schedule in schedules" :key="schedule">
+      <li>
+        <p>일정 제목 : {{schedule.title}}</p>
+        <p>일정 시간 : {{schedule.time}}</p>
+        <p>일정 내용 : {{schedule.contents}}</p>
+      </li>
+  </ol>
 
 </div>
 </template>

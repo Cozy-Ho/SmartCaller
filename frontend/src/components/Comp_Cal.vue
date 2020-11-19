@@ -9,9 +9,15 @@
     </div>
     <div style="margin-left: 30px; height: 200px; width:200px; float: left">
       <p>
-        <b>'{{ value }}' 일정</b>
+        <b>'{{ value }}'의 일정 목록</b>
       </p>
-      <p>{{event_data}}</p>
+      <ol v-for="event in event_data" :key="event">
+        <li>
+          <p>일정 제목 : {{event.title}}</p>
+          <p>일정 시간 : {{event.time}}</p>
+          <p>일정 내용 : {{event.contents}}</p>
+        </li>
+      </ol>
     </div>
   </div>
 </template>
