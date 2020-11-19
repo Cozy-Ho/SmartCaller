@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-      <h1>{{message}}</h1>
+      <h1>{{message.command}}</h1>
   </div>
 </template>
 
