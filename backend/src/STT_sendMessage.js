@@ -6,7 +6,7 @@ function sendMessage(text){
     if(command =="스마트켈러" || command == "스마트캘러")
         start= true
     if(start)
-        app.Message(command)
+    app.Message(text)
 }
 module.exports = {
     sendMessage,

@@ -12,6 +12,8 @@ app.use(express.static('public'));
 //bodyParser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname,'public')));
+app.use(require('connect-history-api-fallback')());
 
 //sync()를 통해서 sequelize-mysql connection
 sequelize.sync();
@@ -34,17 +36,13 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 
-
-app.use(require('connect-history-api-fallback')());
-
-app.use(express.static(path.join(__dirname,'public')));
-
-app.get("/", function (req, res) {
-  res.send("App Server");
-});
+// app.get("/", function (req, res) {
+//   res.send("App Server");
+// });
 
 //connection event handler
 function Message(text) {
+  console.log(text)
   io.sockets.emit("chat", { message: text });
 }
 

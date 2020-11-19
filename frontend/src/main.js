@@ -19,7 +19,7 @@ Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
 
-const socket = io('http://192.168.43.111:3000');
+const socket = io('http://localhost:3000');
 
 Vue.prototype.$socket = socket;
 

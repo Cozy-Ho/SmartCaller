@@ -13,5 +13,7 @@ router.use('/user', require('./user/index'));
 //calendar routing
 router.use('/calendar', require('./calendar/index'));
 
+router.use('/STT', require('./STT/index'));
+
 
 module.exports = router;

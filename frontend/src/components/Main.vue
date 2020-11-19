@@ -74,10 +74,10 @@ export default {
   },
   created() {
     this.$socket.on("chat", (data) => {
-
+      console.log(data.message)
       axios({
         method: 'post',
-        url: 'http://192.168.43.111:3000/STT/command',
+        url: 'http://192.168.42.160:3000/STT/command',
         data: {
           command: data.message,
         }
@@ -108,7 +108,7 @@ export default {
     EventBus.$on("show_event", ()=>{
       axios({
         method:'post',
-        url: 'http://192.168.43.111:3000/calendar/schedule_info',
+        url: 'http://192.168.42.160:3000/calendar/schedule_info',
         data:{
           date: this.event_data[0],
         },
@@ -128,7 +128,7 @@ export default {
       this.selComp="Comp_Cal";
       axios({
         method:'post',
-        url: 'http://192.168.43.111:3000/calendar/schedule_regist',
+        url: 'http://192.168.42.160:3000/calendar/schedule_regist',
         data: {
           title: this.event_data[0],
           date: this.event_data[1],
@@ -152,7 +152,7 @@ export default {
       this.selComp="Comp_Cal";
       axios({
         method:'post',
-        url: 'http://192.168.43.111:3000/calendar/schedule_id',
+        url: 'http://192.168.42.160:3000/calendar/schedule_id',
         data: {
           title: this.event_data[1],
           date: this.event_data[0]
@@ -162,7 +162,7 @@ export default {
           this.event_id = res.data.schedule_info.id;
           axios({
             method:'post',
-            url: 'http://192.168.43.111:3000/calendar/schedule_edit',
+            url: 'http://192.168.42.160:3000/calendar/schedule_edit',
             data:{
               id: this.event_id,
               title: this.event_data[2],
@@ -199,7 +199,7 @@ export default {
       this.selComp="Comp_Cal";
       axios({
         method:'post',
-        url: 'http://192.168.43.111:3000/calendar/schedule_delete',
+        url: 'http://192.168.42.160:3000/calendar/schedule_delete',
         data: {
           title: this.event_data[1],
           date: this.event_data[0],
