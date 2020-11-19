@@ -34,7 +34,7 @@ export default {
   mounted: function () {
     axios({
       method: "get",
-      url: "http://192.168.43.111:3000/calendar/schedule_today",
+      url: "http://localhost:3000/calendar/schedule_today",
     })
       .then((res) => {
         this.event_data = res.data.schedule_today;
