@@ -29,7 +29,7 @@
   <del>**Front** : <code>이승민</code></del><br>
 
 - **Server** : <code>이상훈 허강주 송형근</code><br>
-  **Front** : <code>이승민 서영빈</code>
+  **Front** : <code>이승민 서영빈 허강주</code>
 
 ## 개발 과정
 - Face ID, Server, Front 파트로 나누어 진행
