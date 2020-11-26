@@ -11,7 +11,9 @@
 ## How to start
 
 `$ npm install` on STT, backend, fronted directory.
+
 `$ npm run build` on frontend directory.
+
 `$ node stt.js` on STT directory.
 
 
