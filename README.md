@@ -6,6 +6,19 @@
 [3. 개발 파트](#개발-파트)<br>
 [4. 개발 과정](#개발-과정)<br>
 
+---
+
+## How to start
+
+`$ npm install` on STT, backend, fronted directory.
+`$ npm run build` on frontend directory.
+`$ node stt.js` on STT directory.
+
+
+Access `http://localhost:3000` on your browser
+
+---
+
 ## 프로젝트 개요 (2020년도 2학기)</a>
 - **명칭**<br>
   SmartCaller = Smart + Calendar
@@ -13,7 +26,7 @@
   거울을 보며 동시에 일정 확인과 날씨 정보를 확인할 수 있다.
 - **소개**<br>
   거울을 보며 동시에 음성 인식으로 일정을 확인, 추가, 수정, 삭제를 할 수 있고 날씨 정보도 확인 할 수 있도록 하여, <br>
-  바쁜 일상을 보내는 현대인들이 하루를 편하게 시작할 수 있도록 도와줍니다. 
+  바쁜 일상을 보내는 현대인들이 하루를 편하게 시작할 수 있도록 도와줍니다.
 ## 개발 환경
 - NodeJS
   - 서버 구성
